@@ -10,6 +10,3 @@ class Student(val name: String, val nim: String, var major: String) {
         }
     }
 }
-
-
-fun main(){}
