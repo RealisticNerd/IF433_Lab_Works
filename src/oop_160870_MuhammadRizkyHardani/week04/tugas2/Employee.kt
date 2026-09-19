@@ -5,6 +5,6 @@ open class Employee(val name: String, val baseSalary: Int) {
         println("$name sedang bekerja.")
     }
     open fun calculateBonus(): Int {
-        return baseSalary*10/100
+        return baseSalary * 10/100
     }
 }
