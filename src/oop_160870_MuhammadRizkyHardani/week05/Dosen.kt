@@ -1,4 +1,4 @@
-package oop_160870_MuhammadRizkyHardani.week5
+package oop_160870_MuhammadRizkyHardani.week05
 
 class Dosen (nama: String, val nidn: String): Pegawai(nama){
     // WAJIB di override karena fungsi bekerja bersifat abstract di Parent

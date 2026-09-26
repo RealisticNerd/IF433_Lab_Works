@@ -1,4 +1,4 @@
-package oop_160870_MuhammadRizkyHardani.week5
+package oop_160870_MuhammadRizkyHardani.week05
 
 fun main(){
     val dosen1 = Dosen("Pak Alex", "0123456")
