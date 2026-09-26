@@ -3,12 +3,13 @@ package oop_160870_MuhammadRizkyHardani.week05.tugas2
 class EWallet (accountName: String, var balance: Double): PaymentMethod(accountName){
     override fun processPayment(amount: Double) {
         if (balance >= amount) {
-            println("Sukses")
             balance -= amount
+            println("Sukses! Saldo saat ini: $balance")
         } else {
             println("Saldo Tidak Cukup")
         }
 
+    }
         fun topUp(amount: Double) {
             if (amount > 0) {
                 balance += amount
@@ -17,5 +18,4 @@ class EWallet (accountName: String, var balance: Double): PaymentMethod(accountN
                 println("Jumlah top up tidak valid.")
             }
         }
-    }
 }
