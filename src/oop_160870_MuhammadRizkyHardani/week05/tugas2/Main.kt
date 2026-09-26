@@ -7,7 +7,7 @@ fun main(){
     val paymentMethod: List<PaymentMethod> = listOf(ewallet, credcard)
 
     for (payment in paymentMethod){
-        println("Memproses pembayaran ${payment.accountName}")
+        println("Memproses pembayaran di ${payment.accountName}")
         payment.processPayment(75000.0)
 
         when(payment) {
