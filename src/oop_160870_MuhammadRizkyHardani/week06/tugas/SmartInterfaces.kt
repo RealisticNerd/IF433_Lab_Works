@@ -1,8 +1,8 @@
 package oop_160870_MuhammadRizkyHardani.week06.tugas
 
 interface SmartDevice{
-    val id: String
-    val name: String
+    abstract val id: String
+    abstract val name: String
 }
 
 interface Switchable{
