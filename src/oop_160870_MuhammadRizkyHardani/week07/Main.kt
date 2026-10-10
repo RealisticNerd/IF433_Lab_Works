@@ -33,9 +33,11 @@ fun main(){
 
     println("\n=== TEST SEALED CLASS ===")
     val response: ApiResponse = ApiResponse.Success("Data berhasil ditarik!")
-    // ERROR: 'when' expression must be exhausting
-    val uiMessage = when (response) {
+
+    val uiMessage = when(response) {
         is ApiResponse.Success -> "Tampilkan: ${response.data}"
         is ApiResponse.Error -> "Munculkan Alert: ${response.message}"
+        is ApiResponse.Loading -> "Tampilkan Spinner"
     }
+    println(uiMessage)
 }
