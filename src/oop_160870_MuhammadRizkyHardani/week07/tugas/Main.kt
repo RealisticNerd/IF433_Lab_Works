@@ -14,4 +14,20 @@ fun main(){
     println("Rarity: ${starterSword.item.rarity}")
     println("Durability: ${starterSword.durability}")
 
+
+    println("\n=== Upgrade dan Battle Events ===")
+    val upgradedSword = starterSword.item.copy(damage = 25)
+    println("Senjata setelah upgrade:")
+    println("Nama: ${upgradedSword.name}")
+    println("Damage: ${upgradedSword.damage}")
+    println("Rarity: ${upgradedSword.rarity}")
+
+    println("\n--- Simulasi Event ---")
+    processEvent(BattleState.SafeZone)
+
+    processEvent(BattleState.MonsterEncounter("Goblin Nakal"))
+
+    processEvent(BattleState.LootDropped(upgradedSword))
+
+    processEvent(BattleState.GameOver("Terkena jebakan racun"))
 }
