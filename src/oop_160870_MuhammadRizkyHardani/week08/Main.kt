@@ -40,5 +40,4 @@ fun main(){
     //Coba castke String . Jika gagal (null), ganti dengan "Unknown String"
     val safeString = someObject as? String ?: "Unknown String"
     println("Hasil cast + fallback: $safeString")
-
 }
