@@ -61,4 +61,11 @@ fun main(){
         println(e.message) //Mencetak pesan custom kita, bukan crash buta
     }
 
+
+    println("\n=== TEST JAVA INTEROP ===")
+    val javaRespone = LegacyJavaAPI.fetchServerStatus()
+    //kita menekan tombol !! karena KITA TAHU implementasi java-nya aman
+    val statusLength = javaRespone!!.length
+    println("Status dari Java: $javaRespone (Length: $statusLength)")
+
 }
