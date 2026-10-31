@@ -10,7 +10,6 @@ fun main(){
     )
 
     val parser = ApiParser()
-
     for (raw in rawApiData) {
         try {
             parser.parseProduct(raw)?.let { product ->
