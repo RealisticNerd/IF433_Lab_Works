@@ -68,4 +68,8 @@ fun main(){
     val statusLength = javaRespone!!.length
     println("Status dari Java: $javaRespone (Length: $statusLength)")
 
+
+    println("\n=== RUN MOCKING TEST ===")
+    runMockUnitTest()
+
 }
