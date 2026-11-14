@@ -8,4 +8,7 @@ class WalletRepository<T> {
     }
 
     fun getAll(): List<T> = items.toList()
+
+    fun searchByName(keyword: String, nameOf: (T) -> String): List<T> =
+        items.filter { nameOf(it).contains(keyword, ignoreCase = true) }
 }
