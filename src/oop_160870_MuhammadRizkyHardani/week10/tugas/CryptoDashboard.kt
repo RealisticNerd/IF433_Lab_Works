@@ -18,4 +18,11 @@ fun main() {
     txRepo.add(Transaction("TX001", 0.5))
     txRepo.add(Transaction("TX002", 250.0))
     txRepo.add(Transaction("TX003", 1000.0))
+
+    println("\n=== TRANSACTION LIST ===")
+    txRepo.getAll().forEach { println("- ${it.id}: ${it.amount}") }
+    println("Total transaksi: ${txRepo.getAll().sumOf { it.amount }}")
+
+    println("\n=== SEARCH 'et' ===")
+    println(coinRepo.searchByName("et") { it.name })
 }
