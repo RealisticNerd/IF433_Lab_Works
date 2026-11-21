@@ -61,4 +61,11 @@ fun main() {
     }
     println("\nTotal daya: $totalPower")
 
+
+    println("\n=== SMART HOME DEVICE DIAGNOSTICS ===")
+
+    homeDevices.forEach {
+        println(it.diagnose())
+    }
+
 }
