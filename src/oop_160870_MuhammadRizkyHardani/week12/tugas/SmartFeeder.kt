@@ -25,6 +25,7 @@ fun dispenseKibble(
 fun main(){
     var currentKibbleStock = 50
 
+    println("=== JADWAL MAKAN 1 ===")
     try {
         currentKibbleStock = dispenseKibble(requestedGram = 80, availableGram = currentKibbleStock, isJammed = false)
     } catch (e: DispenserJamException) {
@@ -37,4 +38,8 @@ fun main(){
         println("Siklus pengecekan dispenser pagi selesai.")
     }
 
+    println("\n=== JADWAL MAKAN 2 ===")
+    val feedingResult = runCatching {
+        dispenseKibble(requestedGram = 30, availableGram = 1000, isJammed = false)
+    }
 }
